@@ -45,7 +45,9 @@ public class GameFilter implements Filter {
 
         int idx = httpText.indexOf("</body>");
         if (idx != -1) {
-            httpText.insert(idx, "<p><i>Страница сгенерирована фильтром в: " + Instant.now() + "</i></p>");
+            httpText.insert(idx, "<p><i>Страница сгенерирована фильтром в: "
+                                    + Instant.now()
+                                    + "</i></p>");
         }
 
         response.getWriter().write(httpText.toString());

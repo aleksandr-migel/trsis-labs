@@ -9,8 +9,20 @@ public class GameRepository {
     private static final AtomicLong idGenerator = new AtomicLong(1);
 
     static {
-        games.add(new Game(idGenerator.getAndIncrement(), "The Witcher 3", "CD Projekt RED", 29.99, 2015));
-        games.add(new Game(idGenerator.getAndIncrement(), "Cyberpunk 2077", "CD Projekt RED", 59.99, 2020));
+        games.add(new Game(
+                idGenerator.getAndIncrement(),
+                "The Witcher 3",
+                "CD Projekt RED",
+                29.99,
+                2015
+        ));
+        games.add(new Game(
+                idGenerator.getAndIncrement(),
+                "Cyberpunk 2077",
+                "CD Projekt RED",
+                59.99,
+                2020
+        ));
     }
 
     public static List<Game> findAll() {
